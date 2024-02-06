@@ -8,6 +8,10 @@ void raise_exception(int error) {
       rb_raise(rb_eGitAuthenticationError, "%s", (g_error && g_error->message) ? g_error->message : "Authentication Error");
       break;
 
+    case GIT_TODO:
+      rb_raise(rb_eGitEofError, "%s", (g_error && g_error->message) ? g_error->message : "Unexpected GIT TODO");
+      break;
+    
     case GIT_EEOF:
       rb_raise(rb_eGitEofError, "%s", (g_error && g_error->message) ? g_error->message : "Unexpected EOF");
       break;
