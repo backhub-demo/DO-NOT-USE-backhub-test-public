@@ -44,3 +44,9 @@
   database directory, which is faster. If possible,
   it will hardlink the files to save space.
 - release GIL before calling git_clone
+
+  
+### Addition for testing
+
+- Change this for PR updating
+- Make sure its restored
